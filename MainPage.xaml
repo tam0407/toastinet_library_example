@@ -1,4 +1,4 @@
-﻿<phone:PhoneApplicationPage
+<phone:PhoneApplicationPage
     x:Class="TestToastinetProject.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -30,16 +30,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button x:Name="MessageBoxBtn" Content="Show MessageBox" Click="MessageBoxBtn_Click"/>
-                <Button x:Name="ToastBtn" Content="Show Toast" Click="ToastBtn_Click"/>
-            </StackPanel>
-            
+
             <toastinet:Toastinet x:Name="MyToast" 
                                  AnimationType="Vertical" 
                                  FontSize="24" 
@@ -48,7 +39,15 @@
                                  Background="AliceBlue"
                                  Duration="1"
                                  TextWrapping="Wrap"
-                                 ShowLogo="False" Grid.Row="1"/>
+                                 ShowLogo="False"
+                                 VerticalAlignment="Top"/>
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="MessageBoxBtn" Content="Show MessageBox" Click="MessageBoxBtn_Click"/>
+                <Button x:Name="ToastBtn" Content="Show Toast" Click="ToastBtn_Click"/>
+            </StackPanel>
+
+
         </Grid>
     </Grid>
 
